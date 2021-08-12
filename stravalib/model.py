@@ -782,14 +782,10 @@ class Activity(LoadableEntity):
     start_date_local = TimestampAttribute((SUMMARY, DETAILED), tzinfo=None)  #: :class:`datetime.datetime` when activity was started in activity timezone
     timezone = TimezoneAttribute((SUMMARY, DETAILED))  #: The timezone for activity.
     utc_offset = Attribute(float, (SUMMARY, DETAILED)) #: The UTC offset for activity
-    start_latlng = LocationAttribute((SUMMARY, DETAILED))  #: The start location (lat/lon :class:`tuple`)
-    end_latlng = LocationAttribute((SUMMARY, DETAILED))  #: The end location (lat/lon :class:`tuple`)
 
     location_city = Attribute(six.text_type, (SUMMARY, DETAILED))  #: The activity location city
     location_state = Attribute(six.text_type, (SUMMARY, DETAILED))  #: The activity location state
     location_country = Attribute(six.text_type, (SUMMARY, DETAILED))  #: The activity location state
-    start_latitude = Attribute(float, (SUMMARY, DETAILED))  #: The start latitude
-    start_longitude = Attribute(float, (SUMMARY, DETAILED))  #: The start longitude
 
     achievement_count = Attribute(int, (SUMMARY, DETAILED))  #: How many achievements earned for the activity
     pr_count = Attribute(int, (SUMMARY, DETAILED))  #: How many new personal records earned for the activity
